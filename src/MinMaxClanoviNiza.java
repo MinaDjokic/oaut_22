@@ -6,10 +6,21 @@ public class MinMaxClanoviNiza {
 
         int[] niz = new int[]{56, 1, -13, 1002, -1002, 0}; //niz sa nabacanim vrednostima
 
-        Arrays.sort(niz);  //soriranje niza
-        System.out.println("Sorted array: "+Arrays.toString(niz));
-        System.out.println("Minimum is: "+niz[0]);
-        System.out.println("Maximum is: "+niz[niz.length - 1]);
+        int maxElement = niz[0];
+        int minElement = niz[0];
+
+        for (int j = 0; j< niz.length;j++) {
+            if (niz[j] > maxElement) {
+                maxElement = niz[j];
+            }
+            if(niz[j] < minElement) {
+                minElement = niz[j];
+            }
+        }
+        /*Arrays.sort(niz);  //soriranje niza
+        System.out.println("Sorted array: "+Arrays.toString(niz));*/
+        System.out.println("Minimum is: "+minElement);
+        System.out.println("Maximum is: "+maxElement);
         System.out.println();
 
 
@@ -21,9 +32,12 @@ public class MinMaxClanoviNiza {
                 {5, 6, 7, 3}
         };
 
-        System.out.println("Resenje vezbe prikaza 2d niza sa forEach petljom");
+        System.out.println("Resenje vezbe prikaza 2d niza sa forEach petljom:");
         for (int[] i : niz2d) {
-            System.out.println(Arrays.toString(i));
+            for (int h : i) {
+                System.out.println(h); //ne znam da li je ovde trebalo da formatiram ispis kao tabelu
+            }
+
         }
         System.out.println();
 
